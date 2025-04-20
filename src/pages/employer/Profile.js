@@ -24,7 +24,7 @@ const EmployerProfile = () => {
   useEffect(() => {
     const fetchEmployer = async () => {
       try {
-        const res = await axios.get('/auth/me');
+        const res = await axios.post('/auth/token/me');
         setEmployer(res.data);
         setFormData({
           fullName: res.data.fullName,

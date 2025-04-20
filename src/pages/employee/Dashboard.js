@@ -31,7 +31,7 @@ const EmployeeDashboard = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get('/auth/me');
+        const res = await axios.post('/auth/token/me');
         setUser(res.data);
       } catch (err) {
         console.error('Error fetching user:', err);

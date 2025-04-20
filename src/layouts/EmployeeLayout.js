@@ -16,7 +16,7 @@ const EmployeeLayout = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get('/auth/me');
+        const res = await axios.post('/auth/token/me');
         setUser(res.data);
       } catch {
         navigate('/login');

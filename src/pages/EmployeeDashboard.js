@@ -31,7 +31,7 @@ const EmployeeDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const userRes = await axios.get('/auth/me');
+        const userRes = await axios.post('/auth/token/me');
         setUser(userRes.data);
         fetchRequests();
         fetchTrips(userRes.data._id);
