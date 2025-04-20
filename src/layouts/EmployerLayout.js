@@ -17,7 +17,7 @@ const EmployerLayout = () => {
     const fetchUserAndPending = async () => {
       try {
         const [userRes, pendingRes] = await Promise.all([
-          axios.get('/auth/token/me'),
+          axios.post('/auth/token/me'),
           axios.get('/api/requests/employer'),
         ]);
         setUser(userRes.data);
