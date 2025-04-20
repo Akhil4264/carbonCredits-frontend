@@ -146,7 +146,8 @@ const LoginPage = () => {
               fullWidth
               startIcon={<GoogleIcon />}
               onClick={() => {
-                window.location.href = 'http://localhost:5000/auth/google';
+                window.location.href = 'https://carboncredits-backend.onrender.com/auth/google';
+                // navigate("/auth/google")
               }}
             >
               Login with Google
